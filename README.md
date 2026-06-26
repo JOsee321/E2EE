@@ -37,9 +37,9 @@ Built for **CTF** and **Penetration Testing** workflows, 100% Python standard li
 No installation required beyond Python 3.
 
 ```bash
-git clone https://github.com/<username>/e2ee-decoder.git
-cd e2ee-decoder
-python3 e2ee_decoder.py
+git clone https://github.com/JOsee321/E2EE.git
+cd E2EE
+python E2EE_Decoder.py
 ```
 
 **Requirements:** Python 3.7+ (uses only built-in modules: `sys`, `re`, `json`, `html`, `base64`, `argparse`, `urllib`).
@@ -51,7 +51,7 @@ python3 e2ee_decoder.py
 ### 1. Interactive Mode
 
 ```bash
-python3 e2ee_decoder.py
+python E2EE_Decoder.py
 ```
 
 The banner appears, then choose `[1] Decoder` or `[2] Encoder`. Type `mode` at any time to switch, `exit` to quit.
@@ -59,7 +59,7 @@ The banner appears, then choose `[1] Decoder` or `[2] Encoder`. Type `mode` at a
 ### 2. Pipe Mode (chaining with other tools)
 
 ```bash
-echo "NDY0YzQxNDc3YjZkNzU2Yzc0Njk1ZjZjNjE3OTY1NzI1ZjY0NjU2MzZmNjQ2NTVmNzQ2NTczNzQ3ZA%3D%3D" | python3 e2ee_decoder.py
+echo "NDY0YzQxNDc3YjZkNzU2Yzc0Njk1ZjZjNjE3OTY1NzI1ZjY0NjU2MzZmNjQ2NTVmNzQ2NTczNzQ3ZA%3D%3D" | python E2EE_Decoder.py
 ```
 ```
 [*] Input  : NDY0YzQxNDc3YjZkNzU2Yzc0Njk1ZjZjNjE3OTY1NzI1ZjY0NjU2MzZmNjQ2NTVmNzQ2NTczNzQ3ZA%3D%3D
@@ -68,13 +68,13 @@ echo "NDY0YzQxNDc3YjZkNzU2Yzc0Njk1ZjZjNjE3OTY1NzI1ZjY0NjU2MzZmNjQ2NTVmNzQ2NTczNz
 ```
 
 ```bash
-cat hash.txt | python3 e2ee_decoder.py
+cat hash.txt | python E2EE_Decoder.py
 ```
 
 ### 3. Encoder Mode (CLI one-shot)
 
 ```bash
-python3 e2ee_decoder.py --encode "FLAG{test}"
+python E2EE_Decoder.py --encode "FLAG{test}"
 ```
 ```
 [+] BASE64: RkxBR3t0ZXN0fQ==
@@ -88,7 +88,7 @@ Or target a single method with `--method base64|hex|url|html`.
 ### 4. Hash OSINT Lookup (optional)
 
 ```bash
-echo "5f4dcc3b5aa765d61d8327deb882cf99" | python3 e2ee_decoder.py --online-lookup
+echo "5f4dcc3b5aa765d61d8327deb882cf99" | python E2EE_Decoder.py --online-lookup
 ```
 
 ---
